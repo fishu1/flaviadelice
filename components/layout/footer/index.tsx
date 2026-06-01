@@ -21,7 +21,7 @@ export default function Footer() {
           </p>
           <div className="footer-social">
             <a
-              href="https://instagram.com/CONTUL_TAU"
+              href="https://instagram.com/flaviadelice"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-social-btn"
@@ -34,18 +34,6 @@ export default function Footer() {
               </svg>
               Instagram
             </a>
-            <a
-              href="https://facebook.com/PAGINA_TA"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-social-btn"
-              aria-label="Facebook"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-              </svg>
-              Facebook
-            </a>
           </div>
         </div>
 
@@ -54,7 +42,6 @@ export default function Footer() {
           <h3 className="footer-heading">Navigare</h3>
           <ul className="footer-links">
             <li><Link href="/">Prima pagină</Link></li>
-            <li><Link href="/blog">Blog</Link></li>
             <li><Link href="/galerie">Galerie</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
