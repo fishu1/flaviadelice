@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[70096,["/_next/static/chunks/0b_retmmi.dt1.js","/_next/static/chunks/0yjzk4ew-u6ck.js"],""]
+3:I[78602,["/_next/static/chunks/0b_retmmi.dt1.js","/_next/static/chunks/0yjzk4ew-u6ck.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"blog-post","children":[["$","$L2",null,{"href":"/blog","className":"blog-post-back","children":"← Înapoi la blog"}],["$","header",null,{"className":"blog-post-header","children":[["$","span",null,{"className":"blog-card-tag","children":"Articol"}],["$","h1",null,{"children":"test5"}],["$","div",null,{"className":"hero-divider","style":{"maxWidth":260,"margin":"1.5rem 0"},"children":[["$","span",null,{}],["$","span",null,{"className":"hero-divider-diamond","children":"◆"}],["$","span",null,{}]]}],["$","p",null,{"className":"blog-post-intro","children":"desctest5"}]]}],["$","div",null,{"className":"blog-post-body","children":["$","div",null,{"children":["continut test5"]}]}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"xO9CH6TIE--3x9dRGDmhy"}
+5:null
