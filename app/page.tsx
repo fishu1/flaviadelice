@@ -1,16 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
 
 const images = [
-  "/uploads/cake4.png ",
+  "/uploads/cake4.png",
   "/uploads/cake3.png",
   "/uploads/cake2.png",
   "/uploads/cake5.png",
-
 ];
 
 export default function Page() {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       {/* ── HERO ── */}
@@ -92,6 +95,43 @@ export default function Page() {
         ))}
       </div>
       <div className="gold-line" />
+
+      {/* ── CHOICES IMAGE ── */}
+      <div className="choices">
+        <i className="textChoices">Vezi opțiunile:</i>
+        <Image
+          src="/uploads/diverse/img-1780314255059-235ji.jpeg"
+          alt="descriere"
+          width={400}
+          height={300}
+          onClick={() => setOpen(true)}
+          style={{ cursor: "pointer" }}
+        />
+
+        {open && (
+          <div
+            className="lightbox"
+            onClick={() => setOpen(false)}
+            style={{
+              position: "fixed",
+              inset: 0,
+              background: "rgba(0,0,0,0.8)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              zIndex: 1000,
+            }}
+          >
+            <Image
+              src="/uploads/diverse/img-1780314255059-235ji.jpeg"
+              alt="descriere"
+              width={1000}
+              height={800}
+              style={{ maxWidth: "90%", maxHeight: "90%", width: "auto", height: "auto" }}
+            />
+          </div>
+        )}
+      </div>
 
       {/* ── DESPRE ── */}
       <section className="despre-wrap">

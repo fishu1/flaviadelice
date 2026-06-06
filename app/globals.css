@@ -246,13 +246,14 @@ main  { min-height: 100vh; }
 @media (max-width: 768px) {
   .despre-wrap { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem; }
   .despre-image { display: none; }
-  .features { flex-direction: column; align-items: center; }
+  .features { flex-direction: column; align-items: center;  }
   .feature-item { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.15); max-width: 100%; width: 100%; }
   .feature-item:last-child { border-bottom: none; }
   .galerie-grid { grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); }
   .hero-strip-img { width: 670px; }
   .blog-post { padding: 5rem 1.25rem 3rem; }
 }
+
 @media (max-width: 480px) {
   .hero-buttons      { flex-direction: column; align-items: center; }
   .despre-stats      { gap: 1.25rem; }
