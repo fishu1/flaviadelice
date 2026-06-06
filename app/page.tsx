@@ -98,7 +98,6 @@ export default function Page() {
 
       {/* ── CHOICES IMAGE ── */}
       <div className="choices">
-        <i className="textChoices">Vezi opțiunile:</i>
         <Image
           src="/uploads/diverse/img-1780314255059-235ji.jpeg"
           alt="descriere"
