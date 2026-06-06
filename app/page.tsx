@@ -128,9 +128,9 @@ export default function Page() {
         </h2>
         <div className="testimoniale-grid">
           {[
-            { text: "Tortul de nuntă a fost absolut superb! Toți invitații au cerut rețeta. Mulțumim Flavia!", autor: "Maria P." },
+            { text: "Tortul de aniversare a fost absolut superb! Toți invitații au cerut rețeta. Mulțumim Flavia!", autor: "Maria P." },
             { text: "Comand de fiecare dată pentru ziua de naștere a fiicei mele. Calitate impecabilă!", autor: "Alexandru M." },
-            { text: "Macarons-urile sunt divine. Nu am găsit nicăieri în Sibiu ceva comparabil.", autor: "Ioana D." },
+            { text: "Nu am găsit nicăieri în Sibiu ceva comparabil.", autor: "Ioana D." },
           ].map(t => (
             <div className="testimonial-card" key={t.autor}>
               <div className="testimonial-stele">★★★★★</div>
