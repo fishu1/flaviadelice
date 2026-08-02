@@ -130,7 +130,7 @@ export default function Page() {
       }}
     >
       <Image
-        src="/uploads/diverse/img-1780314255059-235ji.jpeg"
+        src="/uploads/optiuni-torturi/optiuni2.jpeg"
         alt="descriere"
         width={1000}
         height={800}
