@@ -96,41 +96,49 @@ export default function Page() {
       </div>
       <div className="gold-line" />
 
-      {/* ── CHOICES IMAGE ── */}
-      <div className="choices">
-        <Image
-          src="/uploads/diverse/img-1780314255059-235ji.jpeg"
-          alt="descriere"
-          width={400}
-          height={300}
-          onClick={() => setOpen(true)}
-          style={{ cursor: "pointer" }}
-        />
+  {/* ── CHOICES IMAGE ── */}
+<div className="choices">
+  <Image
+    src="/uploads/optiuni-torturi/optiuni2.jpeg"
+    alt="descriere"
+    width={1600}
+    height={1200}
+    onClick={() => setOpen(true)}
+    style={{
+      cursor: "pointer",
+      width: "100%",
+      height: "auto",
+      maxWidth: "1000px",
+      display: "block",
+      margin: "0 auto",
+      borderRadius: "12px",
+    }}
+  />
 
-        {open && (
-          <div
-            className="lightbox"
-            onClick={() => setOpen(false)}
-            style={{
-              position: "fixed",
-              inset: 0,
-              background: "rgba(0,0,0,0.8)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              zIndex: 1000,
-            }}
-          >
-            <Image
-              src="/uploads/diverse/img-1780314255059-235ji.jpeg"
-              alt="descriere"
-              width={1000}
-              height={800}
-              style={{ maxWidth: "90%", maxHeight: "90%", width: "auto", height: "auto" }}
-            />
-          </div>
-        )}
-      </div>
+  {open && (
+    <div
+      className="lightbox"
+      onClick={() => setOpen(false)}
+      style={{
+        position: "fixed",
+        inset: 0,
+        background: "rgba(0,0,0,0.8)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 1000,
+      }}
+    >
+      <Image
+        src="/uploads/diverse/img-1780314255059-235ji.jpeg"
+        alt="descriere"
+        width={1000}
+        height={800}
+        style={{ maxWidth: "90%", maxHeight: "90%", width: "auto", height: "auto" }}
+      />
+    </div>
+  )}
+</div>
 
       {/* ── DESPRE ── */}
       <section className="despre-wrap">
