@@ -53,7 +53,7 @@ export default function Page() {
           </svg>
         </div>
 
-        {/* Text fix */}
+                {/* Text fix */}
         <div className="hero-content">
           <p className="hero-tagline">Bine ai venit la</p>
           <h1 className="hero-title">
@@ -68,11 +68,6 @@ export default function Page() {
           <p className="hero-desc">
             Deserturi artizanale create cu pasiune și ingrediente premium
           </p>
-          <div className="hero-buttons">
-            <Link href="/galerie" className="btn-secondary">GALERIE</Link>
-          </div>
-        </div>
-
           <div className="hero-buttons">
             <Link href="/galerie" className="btn-secondary">GALERIE</Link>
           </div>
@@ -107,6 +102,14 @@ export default function Page() {
               </a>
             </div>
           </div>
+        </div>
+
+        <div className="hero-scroll-hint">
+          <span>scroll</span>
+          <div className="hero-scroll-line" />
+        </div>
+      </div>
+
 
 
         <div className="hero-scroll-hint">
