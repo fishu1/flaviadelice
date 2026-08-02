@@ -77,7 +77,7 @@ export default function Page() {
             <span className="hero-social-text">Dă-ne un follow la pagina de</span>
             <div className="hero-social-btns">
               <a
-                href="https://facebook.com/PAGINA_TA"
+                href="https://www.facebook.com/61591818721435/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hero-social-btn"
@@ -89,7 +89,7 @@ export default function Page() {
                 Facebook
               </a>
               <a
-                href="https://instagram.com/PAGINA_TA"
+                href="https://instagram.com/flaviadelice"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hero-social-btn"
