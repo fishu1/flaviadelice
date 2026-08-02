@@ -122,7 +122,16 @@ main  { min-height: 100vh; }
 @keyframes stripScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(30,15,5,0.72) 0%, rgba(50,28,10,0.60) 50%, rgba(30,15,5,0.72) 100%); }
 .hero-ornament { position: absolute; width: min(520px,80vw); height: min(520px,80vw); opacity: 0.18; pointer-events: none; }
-.hero-content { position: relative; z-index: 2; text-align: center; color: var(--white); padding: 0 1.5rem; max-width: 680px; }
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--white);
+  padding: 0 1.5rem;
+  max-width: 680px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.55);   /* ← adaugă asta */
+}
+
 .hero-tagline { font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.75rem; }
 .hero-title { font-family: var(--font-display); font-size: clamp(3rem,8vw,6rem); line-height: 1.1; display: flex; flex-direction: column; gap: 0.1em; margin-bottom: 1.25rem; }
 .hero-title-gold { color: var(--gold); }
