@@ -14,7 +14,7 @@ const images = [
 export default function Page() {
   const [open, setOpen] = useState(false);
 
-  return (
+    return (
     <>
       {/* ── HERO ── */}
       <div className="hero-wrap">
@@ -53,7 +53,7 @@ export default function Page() {
           </svg>
         </div>
 
-                {/* Text fix */}
+        {/* Text fix */}
         <div className="hero-content">
           <p className="hero-tagline">Bine ai venit la</p>
           <h1 className="hero-title">
@@ -109,14 +109,6 @@ export default function Page() {
           <div className="hero-scroll-line" />
         </div>
       </div>
-
-        <div className="hero-scroll-hint">
-          <span>scroll</span>
-          <div className="hero-scroll-line" />
-        </div>
-      </div>
-
-      {/* ── FEATURES ── */}
 
 
       {/* ── FEATURES ── */}
