@@ -38,9 +38,9 @@ export default function Page() {
         {/* Ornament auriu */}
         <div className="hero-ornament">
           <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="200" cy="200" r="195" stroke="#8f5d06" strokeWidth="0.5" strokeDasharray="4 8" />
-            <circle cx="200" cy="200" r="170" stroke="#8f5d06" strokeWidth="0.3" opacity="0.5" />
-            <circle cx="200" cy="200" r="4" fill="#8f5d06" />
+            <circle cx="200" cy="200" r="195" stroke="#C9A84C" strokeWidth="0.5" strokeDasharray="4 8" />
+            <circle cx="200" cy="200" r="170" stroke="#C9A84C" strokeWidth="0.3" opacity="0.5" />
+            <circle cx="200" cy="200" r="4" fill="#C9A84C" />
             {[0,45,90,135,180,225,270,315].map(a => (
               <line key={a}
                 x1={200 + 175 * Math.cos(a * Math.PI / 180)}
