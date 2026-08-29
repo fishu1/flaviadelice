@@ -133,12 +133,14 @@ main  { min-height: 100vh; }
   text-align: center;
   color: var(--white);
   padding: 0 1.5rem;
+  padding-top: var(--header-h);   /* ← FIX: titlul nu mai intră sub header fix pe desktop */
   max-width: 680px;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.55);   /* ← adaugă asta */
+  text-shadow: 0 2px 12px rgba(0,0,0,0.55);
 }
 
 .hero-tagline { font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.75rem; }
-.hero-title { font-family: var(--font-display); font-size: clamp(3rem,8vw,6rem); line-height: 1.1; display: flex; flex-direction: column; gap: 0.1em; margin-bottom: 1.25rem; }
+/* FIX titlu: max redus de la 6rem la 4.5rem ca sa incapa tot in hero pe desktop */
+.hero-title { font-family: var(--font-display); font-size: clamp(2.6rem,6vw,4.5rem); line-height: 1.1; display: flex; flex-direction: column; gap: 0.1em; margin-bottom: 1.25rem; }
 .hero-title-gold { color: var(--gold); }
 .hero-desc { font-size: 1rem; color: rgba(255,255,255,0.75); margin: 1.25rem 0 2rem; letter-spacing: 0.02em; }
 .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
@@ -475,7 +477,7 @@ main  { min-height: 100vh; }
 
 .legal-section strong { color: var(--brown); font-weight: 600; }
 
-/* ─── Clase ADMIN suplimentare (adauga-le in globals.css) ─── */
+/* ─── Clase ADMIN suplimentare ─── */
 
 .admin-btn-ghost {
   background: transparent;
@@ -499,11 +501,8 @@ main  { min-height: 100vh; }
 
 /* ═══════════════════════════════════════════════════════════
    GALERIE + LIGHTBOX (cu next/image)
-   Adauga acest bloc la finalul globals.css.
-   Controalele (prev/next/contor) stau intr-o bara JOS, sub imagine.
    ═══════════════════════════════════════════════════════════ */
 
-/* Slide-urile caruselului din grila: fade intre ele */
 .carousel-slide {
   position: absolute;
   inset: 0;
@@ -528,7 +527,7 @@ main  { min-height: 100vh; }
   z-index: 1000;
   background: rgba(30, 15, 5, 0.92);
   display: flex;
-  flex-direction: column;          /* imagine sus, bara de control jos */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
@@ -541,11 +540,10 @@ main  { min-height: 100vh; }
   to   { opacity: 1; }
 }
 
-/* Cadrul imaginii — imaginea intreaga, netaiata */
 .lightbox-img-wrap {
   position: relative;
   width: 92vw;
-  height: 78vh;                    /* lasa loc pentru bara de jos */
+  height: 78vh;
   cursor: default;
 }
 .lightbox-img {
@@ -553,7 +551,6 @@ main  { min-height: 100vh; }
   border-radius: var(--radius, 12px);
 }
 
-/* Buton X — colt dreapta sus */
 .lightbox-close {
   position: absolute;
   top: 1.25rem;
@@ -578,7 +575,6 @@ main  { min-height: 100vh; }
   border-color: var(--gold, #C9A84C);
 }
 
-/* Bara de control JOS: prev · contor · next */
 .lightbox-toolbar {
   display: flex;
   align-items: center;
@@ -628,6 +624,7 @@ main  { min-height: 100vh; }
   .lightbox-toolbar { gap: 1rem; padding: 0.5rem 1rem; }
 }
 
+/* HERO SOCIAL */
 .hero-social {
   margin-top: 1.75rem;
   display: flex;
@@ -665,32 +662,30 @@ main  { min-height: 100vh; }
   color: var(--gold);
   transform: translateY(-1px);
 }
-/* ─────────────  PILON  ───────────── */
+
+/* ═══════════════════════════════════════════════════════════
+   PILON (pagini categorie: torturi aniversare, botez, prajituri)
+   ═══════════════════════════════════════════════════════════ */
 .pilon {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 100px 24px 80px; /* padding-top mare = titlul nu mai intră sub header fix */
-  color: #3a2e2a;
+  padding: calc(var(--header-h) + 40px) 24px 80px;
+  color: var(--text);
 }
 
 /* Breadcrumb */
 .pilon-breadcrumb {
   font-size: 0.85rem;
   letter-spacing: 0.05em;
-  color: #9a8a6a;
+  color: var(--text-muted);
   margin-bottom: 32px;
 }
 .pilon-breadcrumb a {
-  color: #9a8a6a;
-  text-decoration: none;
+  color: var(--text-muted);
   transition: color 0.2s;
 }
-.pilon-breadcrumb a:hover {
-  color: #C9A84C;
-}
-.pilon-breadcrumb span {
-  margin: 0 6px;
-}
+.pilon-breadcrumb a:hover { color: var(--gold); }
+.pilon-breadcrumb span { margin: 0 6px; }
 
 /* Header pilon */
 .pilon-header {
@@ -698,30 +693,28 @@ main  { min-height: 100vh; }
   margin-bottom: 56px;
 }
 .pilon-header h1 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 700;
-  color: #3a2e2a;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  color: var(--brown);
   margin: 0 0 20px;
   line-height: 1.15;
 }
 .pilon-lead {
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   line-height: 1.7;
-  color: #5a4a42;
+  color: var(--text-muted);
   max-width: 640px;
   margin: 0 auto 32px;
 }
-
-/* Divider auriu sub titlu (opțional, dacă vrei) */
 .pilon-header::after {
   content: "◆";
   display: block;
-  color: #C9A84C;
+  color: var(--gold);
   font-size: 0.9rem;
   margin: 24px auto 0;
 }
 
-/* Galerie */
+/* Galerie pilon */
 .pilon-galerie {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -729,82 +722,56 @@ main  { min-height: 100vh; }
   margin-bottom: 64px;
 }
 
-/* Text SEO */
+/* Text SEO pilon */
 .pilon-text {
   max-width: 720px;
   margin: 0 auto 64px;
 }
 .pilon-text h2 {
-  font-size: clamp(1.4rem, 3vw, 1.9rem);
-  color: #3a2e2a;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--brown);
   margin: 40px 0 16px;
-  font-weight: 600;
 }
-.pilon-text h2:first-child {
-  margin-top: 0;
-}
+.pilon-text h2:first-child { margin-top: 0; }
 .pilon-text p {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #5a4a42;
+  color: var(--text-muted);
   margin: 0 0 20px;
 }
-.pilon-text strong {
-  color: #3a2e2a;
-  font-weight: 600;
-}
+.pilon-text strong { color: var(--brown); font-weight: 600; }
 
-/* CTA final */
+/* CTA final pilon */
 .pilon-cta {
   text-align: center;
-  background: #faf6ef;
-  border: 1px solid #ece3d3;
-  border-radius: 16px;
+  background: var(--cream-dark);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: var(--radius);
   padding: 48px 24px;
   margin-bottom: 40px;
 }
 .pilon-cta h2 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  color: #3a2e2a;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--brown);
   margin: 0 0 24px;
-  font-weight: 600;
 }
 .pilon-back {
   margin-top: 28px;
   font-size: 0.98rem;
-  color: #7a6a5a;
+  color: var(--text-muted);
 }
 .pilon-back a {
-  color: #C9A84C;
-  text-decoration: none;
-  font-weight: 500;
-  transition: opacity 0.2s;
-}
-.pilon-back a:hover {
-  opacity: 0.75;
-}
-
-/* ─────────────  BUTON PRIMAR  ───────────── */
-.btn-primary {
-  display: inline-block;
-  background: #C9A84C;
-  color: #fff;
+  color: var(--gold-dark);
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  padding: 16px 36px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.25s, transform 0.15s;
-  box-shadow: 0 4px 14px rgba(201, 168, 76, 0.3);
+  transition: color 0.2s;
 }
-.btn-primary:hover {
-  background: #b8963c;
-  transform: translateY(-2px);
-}
+.pilon-back a:hover { color: var(--gold); }
 
-/* ─────────────  CATEGORII pe HOMEPAGE  ───────────── */
+/* ═══════════════════════════════════════════════════════════
+   CATEGORII pe HOMEPAGE
+   ═══════════════════════════════════════════════════════════ */
 .categorii {
   max-width: 1100px;
   margin: 0 auto;
@@ -812,10 +779,10 @@ main  { min-height: 100vh; }
   text-align: center;
 }
 .categorii > h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-  color: #3a2e2a;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  color: var(--brown);
   margin-bottom: 40px;
-  font-weight: 600;
 }
 .categorii-grid {
   display: grid;
@@ -823,61 +790,40 @@ main  { min-height: 100vh; }
   gap: 24px;
 }
 .categorie-card {
-  display: block;
-  background: #faf6ef;
-  border: 1px solid #ece3d3;
-  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid rgba(201, 168, 76, 0.18);
+  border-radius: var(--radius);
   padding: 36px 28px;
-  text-decoration: none;
+  text-align: left;
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 .categorie-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(58, 46, 42, 0.1);
-  border-color: #C9A84C;
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold);
 }
 .categorie-card h3 {
-  font-size: 1.35rem;
-  color: #3a2e2a;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--brown);
   margin: 0 0 12px;
-  font-weight: 600;
 }
 .categorie-card p {
   font-size: 0.98rem;
-  color: #7a6a5a;
+  color: var(--text-muted);
   line-height: 1.6;
   margin: 0;
+  flex: 1;
 }
 
-/* ─────────────  INTRO SEO pe HOMEPAGE  ───────────── */
-.intro-seo {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 64px 24px;
-  text-align: center;
-}
-.intro-seo h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-  color: #3a2e2a;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-.intro-seo p {
-  font-size: 1.08rem;
-  line-height: 1.8;
-  color: #5a4a42;
-  margin: 0 0 20px;
-}
-.intro-seo strong {
-  color: #3a2e2a;
-  font-weight: 600;
-}
-/* ─────────────  CTA "Vezi pagina"  ───────────── */
+/* CTA "Vezi pagina" din card */
 .vezi-pagina {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: 4px;
+  margin-top: 20px;
   color: var(--gold-dark);
   font-weight: 700;
   font-size: 0.8rem;
@@ -890,9 +836,28 @@ main  { min-height: 100vh; }
   font-size: 1.1rem;
   transition: transform 0.25s ease;
 }
-.categorie-card:hover .vezi-pagina {
-  color: var(--gold);
+.categorie-card:hover .vezi-pagina { color: var(--gold); }
+.categorie-card:hover .vezi-pagina::after { transform: translateX(4px); }
+
+/* ═══════════════════════════════════════════════════════════
+   INTRO SEO pe HOMEPAGE
+   ═══════════════════════════════════════════════════════════ */
+.intro-seo {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  text-align: center;
 }
-.categorie-card:hover .vezi-pagina::after {
-  transform: translateX(4px);
+.intro-seo h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  color: var(--brown);
+  margin-bottom: 24px;
 }
+.intro-seo p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin: 0 0 20px;
+}
+.intro-seo strong { color: var(--brown); font-weight: 600; }
