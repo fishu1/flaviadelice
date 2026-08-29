@@ -173,14 +173,20 @@ export default function Page() {
           <Link href="/torturi-aniversare-sibiu" className="categorie-card">
             <h3>Torturi aniversare</h3>
             <p>Torturi personalizate pentru zile de naștere în Sibiu.</p>
+            <br />
+            <span className="vezi-pagina">Vezi pagina</span>
           </Link>
           <Link href="/torturi-botez-sibiu" className="categorie-card">
             <h3>Torturi pentru botez</h3>
             <p>Torturi delicate pentru botezul celui mic.</p>
+            <br />
+            <span className="vezi-pagina">Vezi pagina</span>
           </Link>
           <Link href="/prajituri-artizanale-sibiu" className="categorie-card">
             <h3>Prăjituri pe comandă</h3>
             <p>Prăjituri și dulciuri pentru evenimente în Sibiu.</p>
+            <br />
+            <span className="vezi-pagina">Vezi pagina</span>
           </Link>
         </div>
       </section>
