@@ -125,11 +125,6 @@ export default function Page() {
             </div>
           </div>
         </div>
-
-        <div className="hero-scroll-hint">
-          <span>scroll</span>
-          <div className="hero-scroll-line" />
-        </div>
       </div>
 
       {/* ── FEATURES ── */}
