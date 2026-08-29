@@ -13,13 +13,13 @@ const dancingScript = Dancing_Script({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://flaviadelice.ro"),
-  title: "Flavia Delice — Torturi și prăjituri artizanale",
+  title: "Flavia Delice — Torturi și prăjituri artizanale în Sibiu",
   description:
-    "Torturi personalizate, prăjituri și dulciuri făcute cu grijă. Comenzi pentru orice ocazie.",
+    "Torturi personalizate, prăjituri și dulciuri făcute cu grijă în Sibiu. Comenzi pentru orice ocazie.",
   openGraph: {
-    title: "Flavia Delice — Torturi și prăjituri artizanale",
+    title: "Flavia Delice — Torturi și prăjituri artizanale Sibiu",
     description:
-      "Torturi personalizate, prăjituri și dulciuri făcute cu grijă. Comenzi pentru orice ocazie.",
+      "Torturi personalizate, prăjituri și dulciuri făcute cu grijă în Sibiu. Comenzi pentru orice ocazie.",
     url: "https://flaviadelice.ro",
     siteName: "Flavia Delice",
     locale: "ro_RO",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Flavia Delice — torturi artizanale",
+        alt: "Flavia Delice — torturi și prăjituri artizanale Sibiu",
       },
     ],
   },

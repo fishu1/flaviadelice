@@ -665,3 +665,210 @@ main  { min-height: 100vh; }
   color: var(--gold);
   transform: translateY(-1px);
 }
+/* ─────────────  PILON  ───────────── */
+.pilon {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 24px 80px; /* padding-top mare = titlul nu mai intră sub header fix */
+  color: #3a2e2a;
+}
+
+/* Breadcrumb */
+.pilon-breadcrumb {
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: #9a8a6a;
+  margin-bottom: 32px;
+}
+.pilon-breadcrumb a {
+  color: #9a8a6a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.pilon-breadcrumb a:hover {
+  color: #C9A84C;
+}
+.pilon-breadcrumb span {
+  margin: 0 6px;
+}
+
+/* Header pilon */
+.pilon-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.pilon-header h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: #3a2e2a;
+  margin: 0 0 20px;
+  line-height: 1.15;
+}
+.pilon-lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #5a4a42;
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+/* Divider auriu sub titlu (opțional, dacă vrei) */
+.pilon-header::after {
+  content: "◆";
+  display: block;
+  color: #C9A84C;
+  font-size: 0.9rem;
+  margin: 24px auto 0;
+}
+
+/* Galerie */
+.pilon-galerie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 64px;
+}
+
+/* Text SEO */
+.pilon-text {
+  max-width: 720px;
+  margin: 0 auto 64px;
+}
+.pilon-text h2 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: #3a2e2a;
+  margin: 40px 0 16px;
+  font-weight: 600;
+}
+.pilon-text h2:first-child {
+  margin-top: 0;
+}
+.pilon-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #5a4a42;
+  margin: 0 0 20px;
+}
+.pilon-text strong {
+  color: #3a2e2a;
+  font-weight: 600;
+}
+
+/* CTA final */
+.pilon-cta {
+  text-align: center;
+  background: #faf6ef;
+  border: 1px solid #ece3d3;
+  border-radius: 16px;
+  padding: 48px 24px;
+  margin-bottom: 40px;
+}
+.pilon-cta h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #3a2e2a;
+  margin: 0 0 24px;
+  font-weight: 600;
+}
+.pilon-back {
+  margin-top: 28px;
+  font-size: 0.98rem;
+  color: #7a6a5a;
+}
+.pilon-back a {
+  color: #C9A84C;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.pilon-back a:hover {
+  opacity: 0.75;
+}
+
+/* ─────────────  BUTON PRIMAR  ───────────── */
+.btn-primary {
+  display: inline-block;
+  background: #C9A84C;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 16px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.25s, transform 0.15s;
+  box-shadow: 0 4px 14px rgba(201, 168, 76, 0.3);
+}
+.btn-primary:hover {
+  background: #b8963c;
+  transform: translateY(-2px);
+}
+
+/* ─────────────  CATEGORII pe HOMEPAGE  ───────────── */
+.categorii {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  text-align: center;
+}
+.categorii > h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  color: #3a2e2a;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+.categorii-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.categorie-card {
+  display: block;
+  background: #faf6ef;
+  border: 1px solid #ece3d3;
+  border-radius: 16px;
+  padding: 36px 28px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.categorie-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(58, 46, 42, 0.1);
+  border-color: #C9A84C;
+}
+.categorie-card h3 {
+  font-size: 1.35rem;
+  color: #3a2e2a;
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+.categorie-card p {
+  font-size: 0.98rem;
+  color: #7a6a5a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─────────────  INTRO SEO pe HOMEPAGE  ───────────── */
+.intro-seo {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  text-align: center;
+}
+.intro-seo h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  color: #3a2e2a;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+.intro-seo p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #5a4a42;
+  margin: 0 0 20px;
+}
+.intro-seo strong {
+  color: #3a2e2a;
+  font-weight: 600;
+}
